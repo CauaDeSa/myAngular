@@ -1,0 +1,21 @@
+<div class = "display">
+    <h1 class = "displayTitle">Pokemon details</h1>
+
+    <div class = "displayContent">
+        <div *ngIf = "pokemon">
+            <h2 [ngStyle]="{ color: pokemon.color }">{{ pokemon.name }}</h2>
+
+            <p>Id: {{ pokemon.id }}</p>
+            <p>Type 1: {{ pokemon.type1 }}</p>
+            <p>Type 2: {{ pokemon.type2 }}</p>
+            <p>Color: {{ pokemon.color }}</p>
+        </div>
+
+        <img src="" alt="">
+    </div>
+
+    <div class = "buttons">
+        <button><a routerLink="/apiList">Return</a></button>
+        <button class = "removerButton"><a routerLink="/apiList" (click) = "removePokemon()">Remove</a></button>
+    </div>
+</div>

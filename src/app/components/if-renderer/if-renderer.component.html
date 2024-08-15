@@ -1,0 +1,17 @@
+<div class = "display">
+    <h1 class = "displayTitle">Conditional Render</h1>
+
+    <div class = "displayContent">    
+        <p *ngIf = "canShow">Showing because its allowed</p>
+
+        <p *ngIf = "name === 'Cauã'; else name1NotFound">The name is Cauã</p>
+        <ng-template #name1NotFound>
+            <p>Name is not Cauã</p>
+        </ng-template>
+
+        <p *ngIf = "name === 'Matheus'; else name2NotFound">The name is Matheus</p>
+        <ng-template #name2NotFound>
+            <p>Name is not Matheus</p>
+        </ng-template>
+    </div>
+</div>

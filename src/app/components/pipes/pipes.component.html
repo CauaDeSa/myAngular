@@ -1,0 +1,21 @@
+<div class = "display">
+    <h1 class = "displayTitle">Pipes</h1>
+
+    <div class="displayContent">
+        <p>
+            {{ someText | uppercase }}
+        </p>
+        <p>
+            {{ someText | lowercase }}
+        </p>
+        <p>
+            {{ someText | titlecase }}
+        </p>
+        <p>
+            {{ today | date: 'fullDate' }}
+        </p>
+        <p>
+            {{ today | date: 'shortTime' }}
+        </p>
+    </div>
+</div>

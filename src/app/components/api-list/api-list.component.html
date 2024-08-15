@@ -1,0 +1,35 @@
+<div class = "display">
+
+    <h1 class = "displayTitle"> Api List</h1>
+
+    <div class = "displayContent">
+        <div *ngIf="pokemons.length != 0">
+            <h2>Pokemons</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let pokemon of pokemons">
+                        <th>{{ pokemon.id }}</th>
+                        <td><a [ngStyle]="{ color: pokemon.color }" routerLink = "/apiList/{{pokemon.id}}">{{ pokemon.name }}</a></td>
+                        <td [ngStyle]="{ color: pokemon.color }">{{ pokemon.type1 }}</td>
+                        <td [ngStyle]="{ color: pokemon.color }">{{ pokemon.type2 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p [ngStyle]="{'color': 'black'}">Click at any name to see details</p>
+        </div>
+        
+        <p *ngIf="pokemons.length === 0">
+            No pokemons found
+        </p>
+    </div>
+</div>

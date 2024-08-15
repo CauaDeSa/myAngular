@@ -1,0 +1,52 @@
+<div class = 'display'>
+    <h1 class = "displayTitle">List-renderer</h1>
+
+    <div class = "displayContent">
+        <h2>Pokemons</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Type</th>
+                    <th>Gen</th>
+                    <th>Stats</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let pokemon of pokemons">
+                    <th>{{ pokemon.id }}</th>
+                    <td [ngStyle]="{ color: pokemon.color }">{{ pokemon.name }}</td>
+                    <td [ngStyle]="{ color: pokemon.color }">{{ pokemon.type1 }}</td>
+                    <td [ngStyle]="{ color: pokemon.color }">{{ pokemon.type2 }}</td>
+                    <td [ngStyle]="{ color: pokemon.color }">{{ pokemon.generation }}</td>
+                    <td> <button (click) = "showData(pokemon)"> {{ pokemon.hp == pokeData.hp ? ".Hide" : "Show"}} </button> </td>
+                </tr>
+            </tbody>
+        </table>
+        <table *ngIf="pokeData.hp != 0" class = "dataTable">
+            <thead>
+                <tr>
+                    <th>Hp</th>
+                    <th>Attack</th>
+                    <th>Defense</th>
+                    <th>Sp. Attack</th>
+                    <th>Sp. Defense</th>
+                    <th>Speed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td [ngStyle]="{ color: pokeData.color }">{{ pokeData.hp }}</td>
+                    <td [ngStyle]="{ color: pokeData.color }">{{ pokeData.attack }}</td>
+                    <td [ngStyle]="{ color: pokeData.color }">{{ pokeData.defense }}</td>
+                    <td [ngStyle]="{ color: pokeData.color }">{{ pokeData.spAttack }}</td>
+                    <td [ngStyle]="{ color: pokeData.color }">{{ pokeData.spDefense }}</td>
+                    <td [ngStyle]="{ color: pokeData.color }">{{ pokeData.speed }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

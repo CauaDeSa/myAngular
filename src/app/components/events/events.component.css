@@ -1,0 +1,17 @@
+button{
+    border-radius: 8px;
+    border: 1px solid black;
+    color: black;
+    background-color: rgb(130, 218, 240);
+    size: 10px;
+}
+
+button:hover{
+    background-color: rgb(78, 199, 199);
+    cursor: pointer;
+}
+
+button:active{
+    transform: scale(0.9);    
+    background-color: rgb(9, 151, 151);
+}

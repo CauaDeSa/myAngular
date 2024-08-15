@@ -1,0 +1,39 @@
+{   
+    "pokemons": [
+    {
+        "id": "157",
+        "name": "Articuno",
+        "type1": "Ice",
+        "type2": "Flying",
+        "color": "cyan"
+    },
+    {
+      "id": "158",
+      "name": "Zapdos",
+      "type1": "Electric",
+      "type2": "Flying",
+      "color": "yellow"
+    },
+    {
+      "id": "159",
+      "name": "Moltres",
+      "type1": "Fire",
+      "type2": "Flying",
+      "color": "red"
+    },
+    {
+      "id": "163",
+      "name": "Mewtwo",
+      "type1": "Psychic",
+      "type2": "none",
+      "color": "purple"
+    },
+    {
+      "id": "166",
+      "name": "Mew",
+      "type1": "Psychic",
+      "type2": "none",
+      "color": "pink"
+    }
+  ]
+}

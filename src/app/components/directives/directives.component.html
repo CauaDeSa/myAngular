@@ -1,0 +1,13 @@
+<div class = "display">
+    <h1  class = "displayTitle">First Directive</h1>
+
+    <div class = "displayContent">
+        <p [ngStyle]="{ 'color': color, 'font-size': size, 'font-family': font }">
+            This text has dynamic styles.
+        </p>
+
+        <p [ngClass] = "classes">
+            This text has dynamic classes.
+        </p>
+    </div>
+</div>
