@@ -16,28 +16,9 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterModule, FirstComponentComponent, ParentDataComponent, DirectivesComponent, IfRendererComponent, EventsComponent, EmitterComponent, ListRendererComponent, PipesComponent, TwoWayBindingComponent, ItemsListComponent, CommonModule],
+  imports: [RouterOutlet, RouterModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  selectedButton: number = 0;
-  class = "headerElement";
-
-  buttons = [
-    { id: 1, name: 'First Component', class: 'headerElement', route: '/' },
-    { id: 2, name: 'PokeList', class: 'headerElement', route: 'pokeList' },
-    { id: 3, name: 'Directives', class: 'headerElement', route: 'directives' },
-    { id: 4, name: 'If Renderer', class: 'headerElement', route: 'ifRenderer' },
-    { id: 5, name: 'Events', class: 'headerElement', route: 'events' },
-    { id: 6, name: 'Emitter', class: 'headerElement', route: 'emitter' },
-    { id: 7, name: 'Pipes', class: 'headerElement', route: 'pipes' },
-    { id: 8, name: 'Binding', class: 'headerElement', route: 'binding' },
-    { id: 9, name: 'Items List', class: 'headerElement', route: 'itemsList' },
-    { id: 10, name: 'Api PokeList', class: 'headerElement', route: 'apiList' }
-  ]
-
-  activate(button: number) {
-    this.buttons[button].class = 'selected';
-  }
 }
